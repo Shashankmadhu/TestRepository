@@ -1,0 +1,2 @@
+Feature: As a user on Navigate GAAP
+         I can be able to see the quick tabs

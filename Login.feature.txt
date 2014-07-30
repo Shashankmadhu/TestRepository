@@ -1,0 +1,43 @@
+Feature: As a user for Navigate Gaap
+         I can able to access the HomePage
+
+Background:
+      Given the user is on "https://accountancyexpert.fullfatthings.com/gaap/"
+
+     
+
+Scenario: Verify user on Sign In Page
+    When the user clicks on "Sign In" button
+    Then user can able to see sign in page with login details
+
+
+Scenario: Verify with valid credentials
+   When the user clicks on "Sign In" button
+   And user enters the <Email Address> 
+   And user enters the <password> 
+   And Click on "Sign On" button
+  Then user is redirected to HomePage 
+   And user can able to see <Validations>
+
+      |Email Address                 |Password|Validations                  |
+      |anjalitendulkar@mailinator.com|Test1234|Welcome to CCH Navigate GAAP |
+      |shashank@mailinator.com       |Test1234| HOmelink                    |
+      |                             | 	      |My CPD Tracker               |
+      |                                       | My Folders                  |
+
+
+Scenario: Verify with invalid credentials
+   When the user clicks on "Sign In" button
+    And user enter <Email Address> and <password> 
+    And click on "Sign On" button
+   Then user able to see <Validations>
+
+    |Email Address   		   | Password      | Validations							      |
+
+    |anjalitendulkar@mailinator.com|               |We didn't recognise the username or password you entered.Please try again|   
+    |                              |Test1234       |We didn't recognise the username or password you entered.Please try again|   
+    |hshd                          |_______        |We didn't recognise the username or password you entered.Please try again|
+
+
+
+

@@ -1,0 +1,4 @@
+Feature: As a user for Navigate Gaap
+         I should be abloe to access search field 
+         I can able to see list of layers below the search field
+                 

@@ -1,0 +1,58 @@
+Feature: As a user on Navigate GAAP
+         I can be able to acces My folders
+
+Background: 
+     Given 
+
+
+Scenario: Folder functionality
+   Given the user clicks on the "My folders"
+   Then User should be on "Folders" page
+
+Scenario: Create new folder
+   Given the user is on folders page
+   When the user clicks on "Create new Folder"
+   Then user redirected to "Create new folder" page
+   When the user enters the <Folder title> 
+   And the <Folder description>
+   And click on "Save"
+   Then user should see "The folder was successfully created."
+
+
+Scenario: Add items , notes to the folder 
+   When the user click on the <Quick Tabs>
+   And clicks on the <Products> 
+   Then user is redirected to the <Product page>
+   When the user clicks on the "Summary" 
+   Then User can see "Add this Section to folder"
+   When user clicks on "Add this section to folder"
+   Then the user can be able to see "Add item to folder"
+   When the user selects the <Created folder> from dropdown
+    And Click on "Save" 
+   Then user should be able to see "The section was successfully added to the folder."
+
+Scenario: Create new Folder in Add item to folder page
+   When the user click on the <Quick Tabs>
+   And clicks on the <Products> 
+   Then user is redirected to the <Product page>
+   When the user clicks on the "Summary" 
+   Then User can see "Add this Section to folder"
+   When user clicks on "Add this section to folder"
+   Then the user can be able to see "Add item to folder"
+   When the user selects "-Create new folder-" 
+    And  enters the <Folder title> 
+    And Click on save 
+   Then user should be able to see "The section was successfully added to the folder."
+
+Scenario: 
+
+
+
+  //AreEqual(SubscriptionsPage.GetValuofTheSubscriptions("Start date").Replace(" ", "-"), subscriptionRow.SUB_CRE_DATE);
+                            //AreEqual(SubscriptionsPage.GetValuofTheSubscriptions("End date").Replace(" ", "-"), subscriptionRow.END_DATE);
+                           // AreEqual(SubscriptionsPage.GetValuofTheSubscriptions("Invoice date").Replace(" ", "-"), subscriptionRow.INV_DATE);
+  
+  
+
+
+      
